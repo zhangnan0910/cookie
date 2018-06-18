@@ -16,16 +16,16 @@ https://www.cnblogs.com/maderlzp/p/7843365.html
 
 ```
 /**
-    * 获取对应名称的cookie
-        * @param name cookie的名称
-        * @returns {null} 不存在时，返回null
+* 获取对应名称的cookie
+    * @param name cookie的名称
+    * @returns {null} 不存在时，返回null
 */
 ```
 cookie获取正则解析：
 "(^| )" + name + "=([^;]*)(;|$)"  (^| )匹配cookie开头或空格（cookie键值对之间用分号空格隔开），也就是cookie键值对的开始。接着是cookie的名称name，（[^;]*）匹配除分号以外的任意字符，也就是cookie键值对的值。最后(;|$)匹配分号或整个cookie的结尾，也就是cooke键值对的结尾。
-
+```
 /**
-    * 删除cookie
-        * @param name cookie的名称
+* 删除cookie
+    * @param name cookie的名称
 */
 ```
