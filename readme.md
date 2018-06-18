@@ -29,3 +29,38 @@ cookie获取正则解析：
     * @param name cookie的名称
 */
 ```
+设置要删除的cookie的expires为过去的时间即可
+
+### 修改cookie：
+```
+重新给cookie赋值就行，这样旧的就会被覆盖掉
+```
+ 
+
+ 
+
+cookie的主要作用：
+
+
+### Cookie主要用在以下三个方面:
+```
+1. 会话状态管理（如用户登录状态、购物车、游戏分数和其它需要记录的信息）
+2. 个性化设置（如用户自定义设置、主题等）
+3. 浏览器行为跟踪（如跟踪分析用户行为）
+```
+
+ 
+
+### cookie设置语法：
+
+ 
+```
+document.cookie = "cookieName=mader; expires=Fri, 31 Dec 2017 15:59:59 GMT; path=/mydir; domain=cnblogs.com; max-age=3600; secure=true";
+
+    1. cookieName=mader ：name=value，cookie的名称和值
+    2. expires=Fri, 31 Dec 2017 15:59:59 GMT： expires，cookie过期的日期，如果没有定义，cookie会在对话结束时过期。日期格式为 new Date().toUTCString()
+    3. path=/mydir: path=path (例如 '/', '/mydir') 如果没有定义，默认为当前文档位置的路径。
+    4. domain=cnblogs.com： 指定域(例如 'example.com'， '.example.com' (包括所有子域名), 'subdomain.example.com') 如果没有定义，默认为当前文档位置的路径的域名部分。
+    5. max-age=3600： 文档被查看后cookie过期时间，单位为秒
+    6. secure=true： cookie只会被https传输 ，即加密的https链接传输
+```
